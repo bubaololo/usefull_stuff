@@ -1,0 +1,276 @@
+
+Использовать имеющийся системный шрифт:
+________________________________________
+font-family:
+  -apple-system,
+  BlinkMacSystemFont,
+  Segoe UI, Roboto,
+  Oxygen, Ubuntu,
+  Cantarell, Fira
+  Sans, Droid Sans,
+  Helvetica Neue,
+  sans-serif;
+_________________________________________
+****************************************************
+---------------CENTERING:--------------------------
+____________________________________________________
+[grid] {
+  /* inner */
+  display: grid;
+  place-content: center;
+  gap: 1ch;
+}
+____________________________________________________
+[flex] {
+  /* inner */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1ch;
+}
+
+____________________________________________________
+[margin] {
+  /* inner */
+  display: flex;
+  
+  & > * {
+    /* outer */
+    margin: auto;
+  }
+}_____________________________________________
+[padding] > * {
+  /* inner */
+  padding: 15vmin;
+}
+_______________________________________________
+[absolute] > * {
+  /* outer */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  /* inner */
+  transform: translate(-50%, -50%);
+}
+________________________________________________
+[vertical only]
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+
+************************************************
+картинки в option
+
+<select id='imgCombo' onChange="javascript: doIcon( this.value );" style="width: 65px;" class="icon">
+<option style="background-image: url(imgselect/01.gif);" class="icon" value="01">2</option>
+<option style="background-image: url(imgselect/02.gif);" class="icon" value="02">3</option>
+<option style="background-image: url(imgselect/03.gif);" class="icon" value="03">4</option>
+<option style="background-image: url(imgselect/04.gif);" class="icon" value="04">5</option>
+<option style="background-image: url(imgselect/05.gif);" class="icon" value="05">4</option>
+<option style="background-image: url(imgselect/06.gif);" class="icon" value="06">4</option>
+</select>
+***************************************************
+p::first-letter {
+font-size: 25px;
+font-family: 'Roboto';
+}
+  -буквица
+*****************************************************
+Якорь:
+
+html:
+
+<a href="#gallery">Travel</a>
+
+<section id="gallery">
+<h1>Hello</h1>
+</section>
+_________________________________
+
+CSS:
+
+html{
+scroll-behavior:smooth;
+}
+
+**************************************************
+ТЁМНАЯ ТЕМА:
+
+html {
+background: black;
+filter: invert(1) hue-rotate(180deg);
+}
+****************************************************
+ПРИВЕДЕНИЕ rem к 10 пикселям:
+быстро выбирать размер шрифта 1 rem = 10px + всё становится масштабируемым
+ 
+html {
+font-size: 62.5%;
+}
+
+h1 {
+font-size: 2rem;
+}
+p {
+font-size: 1.8 
+
+@media screen and (max-width: 700px) {
+	html {
+font-size: 55%;
+ }
+}
+***********************************************************************
+
+МНОГОСЛОЙНЫЕ ТЕНИ
+
+div {
+box-shadow: 0px 10px 10px rgba(0,0,0, 0.2), 0px 40px 40px rgba(0,0,0, 0.5);
+}
+
+********************************************************************
+
+ТЕНЬ ПОД SVG И PNG
+
+filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, .3));
+
+********************************************************************
+
+ГРАДИЕНТ
+
+background: linear-gradient(to left, rgb(112,101,214), rgb(230, 106, 213));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+display:inline;
+**********************************************************************
+
+БОЛВАНКА
+html:
+
+<body>
+    <div class="container">
+        
+    </div>
+
+</body>
+
+CSS:
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+.container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+***********************************************
+МЕДИАЗАПРОСЫ:
+
+@media only screen and (max-width : 1920px) { /* CSS правила */ }
+@media only screen and (max-width : 1680px) {}
+@media only screen and (max-width : 1366px) {}
+@media only screen and (max-width : 1280px) {}
+@media only screen and (max-width : 1024px) {}
+@media only screen and (max-width : 800px)  {}
+@media only screen and (max-width : 768px)  {}
+@media only screen and (max-width : 600px)  {}
+@media only screen and (max-width : 533px)  {}
+@media only screen and (max-width : 360px)  {}
+@media only screen and (max-width : 320px)  {}
+@media only screen and (max-width : 240px)  {}
+@media only screen and (max-width : 176px)  {}
+
+
+@media all and (orientation: landscape) {
+  /* CSS правила для устройства в альбомном режиме */
+}
+
+@media all and (orientation: portrait) {
+   /* CSS правила для устройства в портретном режиме */
+}
+
+@media (max-width: 425px) {
+  /* MOBILE */
+}
+@media (min-width: 425px) and (max-width: 1024px){
+  /* TABLET */
+}
+@media (min-width: 1024px) {
+  /* DESKTOP */
+}
+
+
+******************************************************
+
+FAVICON
+
+Desktop
+<link type="image/x-icon" rel="shortcut icon" href="…/favicon.ico">
+<link type="image/png" sizes="16x16" rel="icon" href="… /favicon-16x16.png">
+<link type="image/png" sizes="32x32" rel="icon" href="…/favicon-32x32.png">
+<link type="image/png" sizes="96x96" rel="icon" href="…/favicon-96x96.png">
+<link type="image/png" sizes="120x120" rel="icon" href="…/favicon-120x120.png">
+
+Android
+<link type="image/png" sizes="192x192" rel="icon" href="…/android-icon-192x192.png">
+
+******************************************************************************
+GRADIENT TEXT BACKGROUND
+
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(-70deg, #db469f, #2188ff);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-box-decoration-break: clone;
+
+//сине-фиолетовый
+
+*******************************************************************************
+SOFT SHADOW FOR BUTTONS
+
+box-shadow: 0 16px 24px 2px rgba(29,17,51,.04),0 6px 32px 4px rgba(9,32,77,.12),0 8px 12px -5px rgba(29,17,51,.12);	
+
+**************************************************************************** 
+
+CLIP-PATH on hover
+
+.div {
+    transition: clip-path 1s;
+    clip-path: polygon(44% 32%, 36% 32%, 36% 44%, 45% 44%, 53% 44%, 53% 58%, 44% 58%, 36% 58%, 36% 70%, 44% 70%);
+}
+.div:hover {
+    clip-path: polygon(87% 0, 100% 0, 100% 27%, 100% 100%, 36% 100%, 18% 100%, 0 100%, 0 0, 41% 0, 67% 0);
+
+***********************************************************************************
+SOFT INSET SHADOW FOR GLASS
+
+box-shadow: 1ch 0px 10px 0px rgba(255, 255, 255, .9) inset;
+
+***************************************************************************
+
+GRID GALLERY
+
+display: grid;
+grid-gap: clamp(16px,30px,30px);
+grid-template-columns: repeat(auto-fit, minmax(136px, 255px);
+
+***************************************************************************
+
+
+
+
+
