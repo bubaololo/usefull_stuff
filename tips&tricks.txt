@@ -274,7 +274,11 @@ grid-template-columns: repeat(auto-fit, minmax(136px, 255px);
 
 ***************************************************************************
 
+GRADIENT BACKGROUND FOR BLOCKS
 
+background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255)), linear-gradient(70deg, rgb(221, 244, 255) 32%, rgb(218, 251, 225));
+
+*****************************************************************************
 
 
 
